@@ -33,8 +33,8 @@ type Group struct {
 }
 
 type rule struct {
-	path    string
-	allow   bool
+	Path    string
+	Allow   bool
 	pattern *regexp.Regexp
 }
 
