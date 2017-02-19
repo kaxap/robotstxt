@@ -88,9 +88,9 @@ func (p *parser) parseAll() (groups []*Group, host string, sitemaps []string, er
 				} else {
 					isEmptyGroup = false
 					if li.vr != nil {
-						curGroup.Rules = append(curGroup.rules, &rule{"", false, li.vr})
+						curGroup.Rules = append(curGroup.Rules, &rule{"", false, li.vr})
 					} else {
-						curGroup.Rules = append(curGroup.rules, &rule{li.vs, false, nil})
+						curGroup.Rules = append(curGroup.Rules, &rule{li.vs, false, nil})
 					}
 				}
 
@@ -101,9 +101,9 @@ func (p *parser) parseAll() (groups []*Group, host string, sitemaps []string, er
 				} else {
 					isEmptyGroup = false
 					if li.vr != nil {
-						curGroup.Rules = append(curGroup.rules, &rule{"", true, li.vr})
+						curGroup.Rules = append(curGroup.Rules, &rule{"", true, li.vr})
 					} else {
-						curGroup.Rules = append(curGroup.rules, &rule{li.vs, true, nil})
+						curGroup.Rules = append(curGroup.Rules, &rule{li.vs, true, nil})
 					}
 				}
 
