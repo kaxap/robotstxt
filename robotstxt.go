@@ -28,7 +28,7 @@ type RobotsData struct {
 
 type Group struct {
 	agents     []string
-	rules      []*rule
+	Rules      []*rule
 	CrawlDelay time.Duration
 }
 
