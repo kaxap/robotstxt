@@ -207,7 +207,7 @@ func (g *Group) Test(path string) bool {
 func (g *Group) findRule(path string) (ret *rule) {
 	var prefixLen int
 
-	for _, r := range g.rules {
+	for _, r := range g.Rules {
 		if r.pattern != nil {
 			if r.pattern.MatchString(path) {
 				// Consider this a match equal to the length of the pattern.
