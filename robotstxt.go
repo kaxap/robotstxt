@@ -186,7 +186,7 @@ func (r *RobotsData) FindGroup(agent string) (ret *Group) {
 
 func (g *Group) Test(path string) bool {
 	if r := g.findRule(path); r != nil {
-		return r.allow
+		return r.Allow
 	}
 
 	// From Google's spec:
@@ -218,12 +218,12 @@ func (g *Group) findRule(path string) (ret *rule) {
 					ret = r
 				}
 			}
-		} else if r.path == "/" && prefixLen == 0 {
+		} else if r.Path == "/" && prefixLen == 0 {
 			// Weakest match possible
 			prefixLen = 1
 			ret = r
-		} else if strings.HasPrefix(path, r.path) {
-			if l := len(r.path); l > prefixLen {
+		} else if strings.HasPrefix(path, r.Path) {
+			if l := len(r.Path); l > prefixLen {
 				prefixLen = l
 				ret = r
 			}
